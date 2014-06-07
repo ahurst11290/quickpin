@@ -29,7 +29,7 @@ if ( in_array ( $cmd, $cmds ) ) {
                 $obj->lat = $lat;
                 $obj->lon = $lon;
                 $objJson = json_encode($obj);
-                $redis->rPush("locations", $objJson);
+                $redis->lPush("locations", $objJson);
                 $success = new stdClass();
                 $success->message = "success!";
                 print json_encode($success);

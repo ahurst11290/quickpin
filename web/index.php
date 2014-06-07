@@ -8,7 +8,7 @@
     </head>
     <body>
         <h1>QuickPin</h1>
-        <button class="btn btn-primary" id="addPin">Add a pin</button>
+        <button class="btn btn-primary btn-lg" id="addPin">Add a pin</button>
         <ul class="list-group" id="pins">
             
         </ul>
