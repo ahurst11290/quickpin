@@ -1,7 +1,14 @@
 body {
-    margin: 15px;
+    margin: 0;
 }
 
 ul {
     margin-top:20px;
+}
+
+#addPin {
+    position: absolute;
+    top: 70px;
+    left: 70px;
+    
 }
