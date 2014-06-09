@@ -20,13 +20,14 @@ function getLocationsObj(lat, lon, cb) {
     });
 }
 
-function setLocation() {
+function setLocation(name) {
+    console.log("name2="+name);
     navigator.geolocation.getCurrentPosition(foundLocation, noLocation);
     function foundLocation(pos)
     {
         var lat = pos.coords.latitude;
         var lon = pos.coords.longitude;
-        $.getJSON("locations.php?cmd=set&lat=" + lat + "&lon=" + lon, function(data) {
+        $.getJSON("locations.php?cmd=set&lat=" + lat + "&lon=" + lon + "&name=" + name, function(data) {
             console.log("Adding new location:");
             console.log(lat);
             console.log(lon);
@@ -34,7 +35,7 @@ function setLocation() {
             new google.maps.Marker({
                     position: new google.maps.LatLng(lat, lon),
                     map: map,
-                    title: "N/a"
+                    title: name
             });
         });
     }

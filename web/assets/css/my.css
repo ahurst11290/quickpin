@@ -13,3 +13,15 @@ ul {
     border-radius: 0px;
     
 }
+
+.modal-content {
+    padding: 10px;
+}
+
+.pin-it {
+    margin-left: 10px;
+}
+
+form {
+    width: auto;
+}
